@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:19.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:20.0.4
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -14,7 +14,7 @@ ENV XDG_CONFIG_HOME="/config/xdg"
 RUN \
 apk add --no-cache \
     icu-libs=76.1-r1 \
-    sqlite-libs=3.49.2-r1 \
+    sqlite-libs=3.51.2-r0 \
     xmlstarlet=1.6.1-r2 \
   \
   && if [ "${BUILD_ARCH}" = "aarch64" ]; then RADARR_ARCH="arm64"; \
